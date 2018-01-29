@@ -1,0 +1,12 @@
+*.user
+*.user.*
+translations/*.qm
+build
+# IOS stuff below
+moc_*
+*.o
+*.mak
+*.build
+*.xcodeproj
+bitlitas-wallet-gui_plugin_import.cpp
+bitlitas-wallet-gui_qml_plugin_import.cpp

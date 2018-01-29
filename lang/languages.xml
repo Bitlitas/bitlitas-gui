@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+        <language display_name="Lietuvių" locale="lt_LT" wallet_language="Lietuvių" flag="/lang/flags/lt.png" qs="none"/>
+        <language display_name="English (GB)" locale="en_GB" wallet_language="English" flag="/lang/flags/uk.png" qs="none"/>
+</languages>

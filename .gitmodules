@@ -1,0 +1,4 @@
+[submodule "bitlitas"]
+	path = bitlitas
+	url = https://github.com/Bitlitas/bitlitas.git
+	ignore = all
