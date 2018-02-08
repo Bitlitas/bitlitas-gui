@@ -12,6 +12,13 @@
 #include <QMutex>
 #include <QMutexLocker>
 #include <QString>
+#include <unistd.h>
+#include <signal.h>
+
+#ifdef _WIN32
+#include <windows.h> 
+#endif
+
 
 WalletManager * WalletManager::m_instance = nullptr;
 
@@ -260,9 +267,89 @@ bool WalletManager::startMining(const QString &address, quint32 threads, bool ba
     return m_pimpl->startMining(address.toStdString(), threads, backgroundMining, ignoreBattery);
 }
 
+
+quint64 WalletManager::startPoolMining(const QString &address, quint32 threads)
+{
+    if(threads == 0)
+        threads = 1;
+
+    const std::string addressString = "--user=" + address.toStdString();
+
+    #ifdef Q_OS_UNIX
+
+        pid_t forkPid;  
+
+        puts ("fork()ing");
+    
+        switch ((forkPid = fork()))
+        {
+            case -1:
+            /* Fork() has failed */
+            perror ("fork");
+            break;
+            case 0:
+            /* This is processed by the child */
+            //   execv("./litig", execArgs);
+            execl("./litig", "./litig", "--url=pool.bitlitas.lt:3333", addressString.c_str(), "--pass=x", "--keepalive", (char*) NULL);
+            puts("Uh oh! If this prints, execv() must have failed");
+            exit(EXIT_FAILURE);
+            break;
+            default:
+            /* This is processed by the parent */
+            puts ("This is a message from the parent");
+            break;
+        }
+    
+        return forkPid;
+    #endif
+
+    #ifdef Q_OS_WIN
+        char szPath[] = "litig.exe";
+        PROCESS_INFORMATION pif;
+        STARTUPINFO si;
+
+        ZeroMemory(&si,sizeof(si)); //Zero the STARTUPINFO struct
+        si.cb = sizeof(si);         //Must set size of structure
+
+        BOOL bRet = CreateProcess(
+                szPath, //Path to executable file
+                NULL,   //Command string - not needed here
+                NULL,   //Process handle not inherited
+                NULL,   //Thread handle not inherited
+                FALSE,  //No inheritance of handles
+                0,      //No special flags
+                NULL,   //Same environment block as this prog
+                NULL,   //Current directory - no separate path
+                &si,    //Pointer to STARTUPINFO
+                &pif);   //Pointer to PROCESS_INFORMATION
+
+        if(bRet == FALSE)
+        {
+            MessageBox(HWND_DESKTOP,"Unable to start program","",MB_OK);
+            return 0;
+        }
+
+        CloseHandle(pif.hProcess);   //Close handle to process
+        CloseHandle(pif.hThread);    //Close handle to thread
+
+        return 1;
+    #endif
+
+  return false;
+}
+
 bool WalletManager::stopMining()
 {
     return m_pimpl->stopMining();
+}
+
+bool WalletManager::stopPoolMining(quint32 pid)
+{
+    #ifdef Q_OS_UNIX
+        kill( pid, SIGKILL );
+    #endif
+
+    return false;
 }
 
 bool WalletManager::localDaemonSynced() const

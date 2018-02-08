@@ -116,6 +116,9 @@ public:
     Q_INVOKABLE bool startMining(const QString &address, quint32 threads, bool backgroundMining, bool ignoreBattery);
     Q_INVOKABLE bool stopMining();
 
+    Q_INVOKABLE quint64 startPoolMining(const QString &address, quint32 threads);
+    Q_INVOKABLE bool stopPoolMining(quint32 pid);
+
     // QML missing such functionality, implementing these helpers here
     Q_INVOKABLE QString urlToLocalPath(const QUrl &url) const;
     Q_INVOKABLE QUrl localPathToUrl(const QString &path) const;

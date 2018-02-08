@@ -74,21 +74,6 @@ Rectangle {
             font.bold: true
             color: "blue"
         }
-
-      /* Disable twitter/news panel
-        Image {
-            anchors.left: parent.left
-            anchors.verticalCenter: logo.verticalCenter
-            anchors.leftMargin: 19
-            source: appWindow.rightPanelExpanded ? "images/expandRightPanel.png" :
-                                                   "images/collapseRightPanel.png"
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: appWindow.rightPanelExpanded = !appWindow.rightPanelExpanded
-        }
-      */
     }
 
 

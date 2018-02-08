@@ -912,12 +912,6 @@ ApplicationWindow {
         checkUpdates();
     }
 
-    onRightPanelExpandedChanged: {
-        if (rightPanelExpanded) {
-            rightPanel.updateTweets()
-        }
-    }
-
 
     Settings {
         id: persistentSettings

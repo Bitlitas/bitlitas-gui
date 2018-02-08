@@ -11,6 +11,8 @@ Rectangle {
     id: root
     color: "#F0EEEE"
     property var currentHashRate: 0
+    property var forkPid: 0
+
 
     function isDaemonLocal() {
         if (appWindow.currentDaemonAddress === "")
@@ -31,12 +33,101 @@ Rectangle {
         anchors.bottom: parent.bottom
         spacing: 20
 
+        // pool
+        ColumnLayout {
+            id: poolBox
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: parent.top
+            spacing: 20
+
+            Label {
+                id: poolTitleLabel
+                fontSize: 24
+                text: qsTr("Pool mining") + translationManager.emptyString
+            }
+
+
+            Text {
+                id: poolMainLabel
+                text: qsTr("Pool mining text") + translationManager.emptyString
+                wrapMode: Text.Wrap
+                Layout.fillWidth: true
+            }
+
+            RowLayout {
+                id: poolMinerThreadsRow
+                Label {
+                    id: poolMinerThreadsLabel
+                    color: "#4A4949"
+                    text: qsTr("CPU threads") + translationManager.emptyString
+                    fontSize: 16
+                    Layout.preferredWidth: 120
+                }
+                LineEdit {
+                    id: poolMinerThreadsLine
+                    Layout.preferredWidth:  200
+                    text: "1"
+                    placeholderText: qsTr("(optional)") + translationManager.emptyString
+                    validator: IntValidator { bottom: 1 }
+                }
+            }
+
+
+            RowLayout {
+                StandardButton {
+                    visible: true
+                    id: startPoolMinerButton
+                    width: 110
+                    text: qsTr("Start mining") + translationManager.emptyString
+                    shadowReleasedColor: "#306d30"
+                    shadowPressedColor: "#B32D00"
+                    releasedColor: "#499149"
+                    pressedColor: "#306d30"
+                    onClicked: {
+                        var success = walletManager.startPoolMining(appWindow.currentWallet.address, poolMinerThreadsLine.text)
+                        if (success) {
+                            forkPid = success;
+                            update()
+                        } else {
+                            errorPopup.title  = qsTr("Error starting mining") + translationManager.emptyString;
+                            errorPopup.text = qsTr("Couldn't start mining.<br>")
+                            errorPopup.icon = StandardIcon.Critical
+                            errorPopup.open()
+                        }
+                    }
+                }
+
+                StandardButton {
+                    visible: true
+                    id: stopPoolMinerButton
+                    width: 110
+                    text: qsTr("Stop mining") + translationManager.emptyString
+                    shadowReleasedColor: "#306d30"
+                    shadowPressedColor: "#B32D00"
+                    releasedColor: "#499149"
+                    pressedColor: "#306d30"
+                    onClicked: {
+                        walletManager.stopPoolMining(forkPid)
+                        update()
+                    }
+                }
+            }
+
+            Text {
+                id: poolStatusText
+                text: qsTr("Status: not mining")
+                textFormat: Text.RichText
+                wrapMode: Text.Wrap
+            }
+        }
+
         // solo
         ColumnLayout {
             id: soloBox
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.top: parent.top
+            anchors.top: parent.top + 400
             spacing: 20
 
             Label {
