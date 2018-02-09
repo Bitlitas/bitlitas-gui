@@ -563,6 +563,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../pages/Mining.qml" line="93"/>
+        <source>Pool mining</source>
+        <translation>Pool mining</translation>
+    </message>
+    <message>
+        <location filename="../pages/Mining.qml" line="93"/>
+        <source>We recommend you to use pool mining. Going solo means you won’t have to share the reward, but your odds of getting a reward are significantly decreased. Although a pool has a much larger chance of solving a block and winning the reward, that reward will be split between all the pool members.</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="../pages/Mining.qml" line="101"/>
         <source>(optional)</source>
         <translation type="unfinished"></translation>

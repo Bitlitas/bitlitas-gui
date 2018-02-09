@@ -274,6 +274,7 @@ quint64 WalletManager::startPoolMining(const QString &address, quint32 threads)
         threads = 1;
 
     const std::string addressString = "--user=" + address.toStdString();
+    const std::string threadsString = "--threads=" + std::to_string(threads);
 
     #ifdef Q_OS_UNIX
 
@@ -289,8 +290,8 @@ quint64 WalletManager::startPoolMining(const QString &address, quint32 threads)
             break;
             case 0:
             /* This is processed by the child */
-            //   execv("./litig", execArgs);
-            execl("./litig", "./litig", "--url=pool.bitlitas.lt:3333", addressString.c_str(), "--pass=x", "--keepalive", (char*) NULL);
+            execl("./litig", "./litig", "--url=pool.bitlitas.lt:3333", addressString.c_str(), threadsString.c_str(), "--pass=x", "--keepalive", (char*) NULL);
+
             puts("Uh oh! If this prints, execv() must have failed");
             exit(EXIT_FAILURE);
             break;
@@ -304,35 +305,12 @@ quint64 WalletManager::startPoolMining(const QString &address, quint32 threads)
     #endif
 
     #ifdef Q_OS_WIN
-        char szPath[] = "litig.exe";
-        PROCESS_INFORMATION pif;
-        STARTUPINFO si;
 
-        ZeroMemory(&si,sizeof(si)); //Zero the STARTUPINFO struct
-        si.cb = sizeof(si);         //Must set size of structure
+        const std::string winAddressString = "--url=pool.bitlitas.lt:3333 --pass=x --keepalive --user=" + address.toStdString() + " --threads=" + std::to_string(threads);
 
-        BOOL bRet = CreateProcess(
-                szPath, //Path to executable file
-                NULL,   //Command string - not needed here
-                NULL,   //Process handle not inherited
-                NULL,   //Thread handle not inherited
-                FALSE,  //No inheritance of handles
-                0,      //No special flags
-                NULL,   //Same environment block as this prog
-                NULL,   //Current directory - no separate path
-                &si,    //Pointer to STARTUPINFO
-                &pif);   //Pointer to PROCESS_INFORMATION
+        ShellExecuteA(NULL, "open", "litig.exe", winAddressString.c_str(), NULL, SW_SHOWNORMAL);
 
-        if(bRet == FALSE)
-        {
-            MessageBox(HWND_DESKTOP,"Unable to start program","",MB_OK);
-            return 0;
-        }
-
-        CloseHandle(pif.hProcess);   //Close handle to process
-        CloseHandle(pif.hThread);    //Close handle to thread
-
-        return 1;
+        return true;
     #endif
 
   return false;

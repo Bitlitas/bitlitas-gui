@@ -50,7 +50,7 @@ Rectangle {
 
             Text {
                 id: poolMainLabel
-                text: qsTr("Pool mining text") + translationManager.emptyString
+                text: qsTr("We recommend you to use pool mining. Going solo means you won’t have to share the reward, but your odds of getting a reward are significantly decreased. Although a pool has a much larger chance of solving a block and winning the reward, that reward will be split between all the pool members.") + translationManager.emptyString
                 wrapMode: Text.Wrap
                 Layout.fillWidth: true
             }
@@ -99,7 +99,6 @@ Rectangle {
                 }
 
                 StandardButton {
-                    visible: true
                     id: stopPoolMinerButton
                     width: 110
                     text: qsTr("Stop mining") + translationManager.emptyString
@@ -107,18 +106,12 @@ Rectangle {
                     shadowPressedColor: "#B32D00"
                     releasedColor: "#499149"
                     pressedColor: "#306d30"
+                    visible: !isWindows && !isAndroid && !isIOS
                     onClicked: {
                         walletManager.stopPoolMining(forkPid)
                         update()
                     }
                 }
-            }
-
-            Text {
-                id: poolStatusText
-                text: qsTr("Status: not mining")
-                textFormat: Text.RichText
-                wrapMode: Text.Wrap
             }
         }
 
@@ -127,7 +120,7 @@ Rectangle {
             id: soloBox
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.top: parent.top + 400
+            anchors.top: 200
             spacing: 20
 
             Label {
