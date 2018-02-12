@@ -73,6 +73,29 @@ Rectangle {
                 }
             }
 
+            ColumnLayout {
+                Layout.fillWidth: true
+                Label {
+                    id: poolSelect
+                    text: qsTr("Pool") + translationManager.emptyString
+                }
+
+                ListModel {
+                    id: poolModel
+                    ListElement { column1: "pool.bitlitas.lt:3333" ; column2: ""; pool: 1}
+
+                }
+
+                StandardDropdown {
+                    Layout.fillWidth: true
+                    id: poolDropdown
+                    shadowReleasedColor: "#306d30"
+                    shadowPressedColor: "#B32D00"
+                    releasedColor: "#499149"
+                    pressedColor: "#306d30"
+                }
+            }
+
 
             RowLayout {
                 StandardButton {
@@ -120,7 +143,7 @@ Rectangle {
             id: soloBox
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.top: 200
+            anchors.topMargin: -100
             spacing: 20
 
             Label {
@@ -275,6 +298,10 @@ Rectangle {
 
     function onPageCompleted() {
         console.log("Mining page loaded");
+
+        poolDropdown.dataModel = poolModel;
+        poolDropdown.currentIndex = 0
+        poolDropdown.update()
 
         update()
         timer.running = isDaemonLocal()

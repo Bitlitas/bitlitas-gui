@@ -564,6 +564,11 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="93"/>
+        <source>Pool</source>
+        <translation>Kasykla</translation>
+    </message>
+    <message>
+        <location filename="../pages/Mining.qml" line="93"/>
         <source>We recommend you to use pool mining. Going solo means you won’t have to share the reward, but your odds of getting a reward are significantly decreased. Although a pool has a much larger chance of solving a block and winning the reward, that reward will be split between all the pool members.</source>
         <translation>Išaugus tinklo greičiui rekomenduojame kasti kasykloje, nes solo būdu rasti blokų sprendimus galima tik didelio atsitiktinumo dėka. Kasant bendrai padidėja bloko radimo tikimybė. Gaukite savo dalį pagal galią nuo kasyklos sėkmės.</translation>
     </message>
