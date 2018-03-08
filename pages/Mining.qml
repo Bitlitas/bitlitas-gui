@@ -135,6 +135,21 @@ Rectangle {
                         update()
                     }
                 }
+
+                StandardButton {
+                    id: downloadMiner
+                    width: 110
+                    text: qsTr("Download miner") + translationManager.emptyString
+                    shadowReleasedColor: "#306d30"
+                    shadowPressedColor: "#B32D00"
+                    releasedColor: "#499149"
+                    pressedColor: "#306d30"
+                    visible: !isAndroid && !isIOS
+                    onClicked: {
+                        walletManager.downloadMiner()
+                        update()
+                    }
+                }
             }
         }
 

@@ -613,6 +613,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../pages/Mining.qml" line="173"/>
+        <source>Download miner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../pages/Mining.qml" line="188"/>
         <source>Status: not mining</source>
         <translation type="unfinished"></translation>

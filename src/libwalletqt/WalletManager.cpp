@@ -330,6 +330,16 @@ bool WalletManager::stopPoolMining(quint32 pid)
     return false;
 }
 
+
+bool WalletManager::downloadMiner()
+{
+    #ifdef _WIN32
+        ShellExecute(0, 0, L"https://wiki.bitlitas.lt/index.php?title=Minner-win", 0, 0 , SW_SHOW );
+    #else
+        system("xdg-open https://wiki.bitlitas.lt/index.php?title=Minner-unix");
+    #endif
+}
+
 bool WalletManager::localDaemonSynced() const
 {
     return blockchainHeight() > 1 && blockchainHeight() >= blockchainTargetHeight();
