@@ -334,9 +334,9 @@ bool WalletManager::stopPoolMining(quint32 pid)
 bool WalletManager::downloadMiner()
 {
     #ifdef _WIN32
-        ShellExecute(0, 0, L"https://wiki.bitlitas.lt/index.php?title=Minner-win", 0, 0 , SW_SHOW );
+        ShellExecute(0, 0, L"https://wiki.bitlitas.lt/index.php?title=Miner-win", 0, 0 , SW_SHOW );
     #else
-        system("xdg-open https://wiki.bitlitas.lt/index.php?title=Minner-unix");
+        system("xdg-open https://wiki.bitlitas.lt/index.php?title=Miner-unix");
     #endif
 }
 
