@@ -202,13 +202,13 @@
     <message>
         <location filename="../pages/History.qml" line="199"/>
         <source>Date from</source>
-        <translation>Data nuo</translation>
+        <translation>Data nuo:</translation>
     </message>
     <message>
         <location filename="../pages/History.qml" line="225"/>
         <location filename="../pages/History.qml" line="379"/>
         <source>To</source>
-        <translation>Iki</translation>
+        <translation>Iki:</translation>
     </message>
     <message>
         <location filename="../pages/History.qml" line="290"/>
@@ -218,12 +218,12 @@
     <message>
         <location filename="../pages/History.qml" line="310"/>
         <source>Type of transaction</source>
-        <translation>Pavedimo tipas</translation>
+        <translation>Pervedimo tipas:</translation>
     </message>
     <message>
         <location filename="../pages/History.qml" line="346"/>
         <source>Amount from</source>
-        <translation>Suma nuo</translation>
+        <translation>Suma nuo:</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@
     <message>
         <location filename="../components/HistoryTable.qml" line="48"/>
         <source>Transaction details</source>
-        <translation>Pavedimo detalės</translation>
+        <translation>Pervedimo detalės:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="48"/>
@@ -242,7 +242,7 @@
         <location filename="../components/HistoryTable.qml" line="49"/>
         <location filename="../components/HistoryTable.qml" line="195"/>
         <source>Payment ID:</source>
-        <translation>Pavedimo ID:</translation>
+        <translation>Pervedimo ID:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="50"/>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../components/HistoryTable.qml" line="52"/>
         <source>Destinations:</source>
-        <translation>Gavėjei:</translation>
+        <translation>Gavėjai:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="78"/>
@@ -292,17 +292,17 @@
     <message>
         <location filename="../components/HistoryTable.qml" line="292"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>Data:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="349"/>
         <source>Amount</source>
-        <translation>Suma</translation>
+        <translation>Kiekis:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="384"/>
         <source>Fee</source>
-        <translation>Mokėstis</translation>
+        <translation>Mokestis:</translation>
     </message>
 </context>
 <context>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../components/HistoryTableMobile.qml" line="51"/>
         <source>Destinations:</source>
-        <translation>Gavėjei:</translation>
+        <translation>Gavėjai:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTableMobile.qml" line="77"/>
@@ -540,7 +540,7 @@
     <message>
         <location filename="../pages/Mining.qml" line="70"/>
         <source>Solo mining</source>
-        <translation>Solo kasimas</translation>
+        <translation>"Solo" kasimas:</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="77"/>
@@ -555,17 +555,17 @@
     <message>
         <location filename="../pages/Mining.qml" line="93"/>
         <source>CPU threads</source>
-        <translation>CPU branduoliai</translation>
+        <translation>CPU branduolių kiekis:</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="93"/>
         <source>Pool mining</source>
-        <translation>Pool kasimas</translation>
+        <translation>"Pool" kasimas:</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="93"/>
         <source>Pool</source>
-        <translation>Kasykla</translation>
+        <translation>Kasykla:</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="93"/>
@@ -580,7 +580,7 @@
     <message>
         <location filename="../pages/Mining.qml" line="113"/>
         <source>Background mining (experimental)</source>
-        <translation>Kasti fone (eksperimentinis)</translation>
+        <translation>Kasimas fone (Eksperimentinis)</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="129"/>
