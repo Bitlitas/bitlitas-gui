@@ -257,7 +257,7 @@
     <message>
         <location filename="../components/HistoryTable.qml" line="52"/>
         <source>Destinations:</source>
-        <translation>Gavėjei:</translation>
+        <translation>Gavėjai:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="78"/>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../components/HistoryTableMobile.qml" line="51"/>
         <source>Destinations:</source>
-        <translation>Gavėjei:</translation>
+        <translation>Gavėjai:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTableMobile.qml" line="77"/>
