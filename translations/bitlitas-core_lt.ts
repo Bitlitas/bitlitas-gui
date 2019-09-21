@@ -21,7 +21,7 @@
     <message>
         <location filename="../pages/AddressBook.qml" line="80"/>
         <source>Payment ID</source>
-        <translation>Pavedimo ID (pasirinktinai)</translation>
+        <translation>Pervedimo ID (Pasirinktinai)</translation>
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="81"/>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../components/AddressBookTable.qml" line="47"/>
         <source>No more results</source>
-        <translation>Jokių kontaktų nėra</translation>
+        <translation>Jokių kontaktų neturite</translation>
     </message>
     <message>
         <location filename="../components/AddressBookTable.qml" line="104"/>
         <source>Payment ID:</source>
-        <translation>Pavedimo ID:</translation>
+        <translation>Pervedimo ID:</translation>
     </message>
     <message>
         <location filename="../components/AddressBookTable.qml" line="149"/>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../pages/History.qml" line="135"/>
         <source>Filter transaction history</source>
-        <translation>Filtruoti pavedimų istoriją</translation>
+        <translation>Filtruoti pervedimų istoriją</translation>
     </message>
     <message>
         <location filename="../pages/History.qml" line="159"/>
@@ -218,7 +218,7 @@
     <message>
         <location filename="../pages/History.qml" line="310"/>
         <source>Type of transaction</source>
-        <translation>Pavedimo tipas</translation>
+        <translation>Pervedimo tipas</translation>
     </message>
     <message>
         <location filename="../pages/History.qml" line="346"/>
@@ -231,7 +231,7 @@
     <message>
         <location filename="../components/HistoryTable.qml" line="48"/>
         <source>Transaction details</source>
-        <translation>Pavedimo detalės</translation>
+        <translation>Pervedimo detalės</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="48"/>
@@ -242,7 +242,7 @@
         <location filename="../components/HistoryTable.qml" line="49"/>
         <location filename="../components/HistoryTable.qml" line="195"/>
         <source>Payment ID:</source>
-        <translation>Pavedimo ID:</translation>
+        <translation>Pervedimo ID:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTable.qml" line="50"/>
@@ -315,7 +315,7 @@
     <message>
         <location filename="../components/HistoryTableMobile.qml" line="48"/>
         <source>Payment ID:</source>
-        <translation>Pavedimo ID:</translation>
+        <translation>Pervedimo ID:</translation>
     </message>
     <message>
         <location filename="../components/HistoryTableMobile.qml" line="49"/>
@@ -575,7 +575,7 @@
     <message>
         <location filename="../pages/Mining.qml" line="101"/>
         <source>(optional)</source>
-        <translation>(pasirinktinai)</translation>
+        <translation>(Pasirinktinai)</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="113"/>
@@ -689,7 +689,7 @@
     <message>
         <location filename="../components/PasswordDialog.qml" line="87"/>
         <source>Please enter wallet password for:&lt;br&gt;</source>
-        <translation>Prašome įvesti slaptažodį kad atrakinti:&lt;br&gt;</translation>
+        <translation>Prašome įvesti slaptažodį, kad atrakintumėt piniginę:&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../components/PasswordDialog.qml" line="155"/>
@@ -751,7 +751,7 @@
     <message>
         <location filename="../pages/Receive.qml" line="64"/>
         <source>Invalid payment ID</source>
-        <translation>Blogas pavedimo ID</translation>
+        <translation>Blogas pervedimo ID</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="107"/>
@@ -781,7 +781,7 @@
     <message>
         <location filename="../pages/Receive.qml" line="150"/>
         <source>Transaction found</source>
-        <translation>Pavedimas rastas</translation>
+        <translation>Pervedimas rastas</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="150"/>
@@ -821,7 +821,7 @@
     <message>
         <location filename="../pages/Receive.qml" line="241"/>
         <source>Payment ID copied to clipboard</source>
-        <translation>Pavedimo ID nukopijuotas</translation>
+        <translation>Pervedimo ID nukopijuotas</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="264"/>
@@ -831,7 +831,7 @@
     <message>
         <location filename="../pages/Receive.qml" line="273"/>
         <source>Integrated address</source>
-        <translation>Integruotas adresas</translation>
+        <translation>Integruotas adresas:</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="294"/>
@@ -856,12 +856,12 @@
     <message>
         <location filename="../pages/Receive.qml" line="342"/>
         <source>Tracking payments</source>
-        <translation>Sekti pavedimą</translation>
+        <translation>Sekti pervedimą</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="343"/>
         <source>&lt;p&gt;&lt;font size=&apos;+2&apos;&gt;This is a simple sales tracker:&lt;/font&gt;&lt;/p&gt;&lt;p&gt;Click Generate to create a random payment id for a new customer&lt;/p&gt; &lt;p&gt;Let your customer scan that QR code to make a payment (if that customer has software which supports QR code scanning).&lt;/p&gt;&lt;p&gt;This page will automatically scan the blockchain and the tx pool for incoming transactions using this QR code. If you input an amount, it will also check that incoming transactions total up to that amount.&lt;/p&gt;It&apos;s up to you whether to accept unconfirmed transactions or not. It is likely they&apos;ll be confirmed in short order, but there is still a possibility they might not, so for larger values you may want to wait for one or more confirmation(s).&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;font size=&apos;+2&apos;&gt;Tai yra paprastas pardavimų sekėjas:&lt;/font&gt;&lt;/p&gt;&lt;p&gt;Naujam pirkėjui sugeneruok naują pavedimo ID&lt;/p&gt; &lt;p&gt;Leisk jam nuskenuoti QR kodą.&lt;/p&gt;&lt;p&gt;Programa automatiškai skenuoja blokų grandinę, laukdama šio mokėjimo. Net ir sulaukus pavedimo rekomenduojame sulaukti daugiau patvirtinimų iš kasėjų.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&lt;font size=&apos;+2&apos;&gt;Tai yra paprastas pardavimų sekėjas:&lt;/font&gt;&lt;/p&gt;&lt;p&gt;Naujam pirkėjui sugeneruok naują pervedimo ID&lt;/p&gt; &lt;p&gt;Leisk jam nuskenuoti QR kodą.&lt;/p&gt;&lt;p&gt;Programa automatiškai skenuoja blokų grandinę, laukdama šio mokėjimo. Net ir sulaukus pervedimo rekomenduojame sulaukti daugiau patvirtinimų iš kasėjų.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="387"/>
@@ -881,7 +881,7 @@
     <message>
         <location filename="../pages/Receive.qml" line="221"/>
         <source>Payment ID</source>
-        <translation>Pavedimo ID</translation>
+        <translation>Pervedimo ID:</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="253"/>
@@ -891,7 +891,7 @@
     <message>
         <location filename="../pages/Receive.qml" line="282"/>
         <source>Generate payment ID for integrated address</source>
-        <translation>Generuoti pavedimo ID integruotam adresui</translation>
+        <translation>Generuoti pervedimo ID integruotam adresui</translation>
     </message>
     <message>
         <location filename="../pages/Receive.qml" line="306"/>
@@ -941,7 +941,7 @@
         <location filename="../pages/Settings.qml" line="284"/>
         <location filename="../pages/Settings.qml" line="314"/>
         <source>(optional)</source>
-        <translation>(pasirinktinai)</translation>
+        <translation>(Pasirinktinai)</translation>
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="145"/>
@@ -1041,7 +1041,7 @@
     <message>
         <location filename="../pages/Settings.qml" line="325"/>
         <source>Node login (optional)</source>
-        <translation>Jungties prisijungimo vardas (pasirinktinai)</translation>
+        <translation>Jungties prisijungimo vardas (Pasirinktinai)</translation>
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="356"/>
@@ -1256,7 +1256,7 @@ The old wallet cache file will be renamed and can be restored later.
     <message>
         <location filename="../components/TableHeader.qml" line="65"/>
         <source>Payment ID</source>
-        <translation>Pavedimo ID</translation>
+        <translation>Pervedimo ID</translation>
     </message>
     <message>
         <location filename="../components/TableHeader.qml" line="66"/>
@@ -1307,12 +1307,12 @@ The old wallet cache file will be renamed and can be restored later.
     <message>
         <location filename="../pages/Transfer.qml" line="181"/>
         <source>Transaction priority</source>
-        <translation>Pavedimo svarba</translation>
+        <translation>Pervedimo svarba</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="45"/>
         <source>Start daemon</source>
-        <translation>Paleisti jungtįs</translation>
+        <translation>Paleisti jungtį</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="194"/>
@@ -1481,7 +1481,7 @@ Please upgrade or connect to another daemon</source>
     <message>
         <location filename="../pages/Transfer.qml" line="310"/>
         <source>Payment ID &lt;font size=&apos;2&apos;&gt;( Optional )&lt;/font&gt;</source>
-        <translation>Pavedimo ID &lt;font size=&apos;2&apos;&gt;( Pasirinkinai )&lt;/font&gt;</translation>
+        <translation>Pervedimo ID &lt;font size=&apos;2&apos;&gt;( Pasirinkinai )&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="203"/>
@@ -1954,13 +1954,13 @@ Please upgrade or connect to another daemon</source>
     <message>
         <location filename="../main.qml" line="557"/>
         <source>Can&apos;t create transaction: Wrong daemon version: </source>
-        <translation>Negalima sukurti pavedimo: Bloga jungties versija: </translation>
+        <translation>Negalima sukurti pervedimo: Bloga jungties versija: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="559"/>
         <location filename="../main.qml" line="672"/>
         <source>Can&apos;t create transaction: </source>
-        <translation>Negalima sukurti pavedimo: </translation>
+        <translation>Negalima sukurti pervedimo: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="568"/>
@@ -1979,7 +1979,7 @@ Please upgrade or connect to another daemon</source>
         <location filename="../main.qml" line="694"/>
         <source>Please confirm transaction:
 </source>
-        <translation>Prašome patvirtinti pavedimą:</translation>
+        <translation>Prašome patvirtinti pervedimą:</translation>
     </message>
     <message>
         <location filename="../main.qml" line="582"/>
@@ -1993,7 +1993,7 @@ Adresas: </translation>
         <source>
 Payment ID: </source>
         <translation>
-Pavedimo ID:</translation>
+Pervedimo ID:</translation>
     </message>
     <message>
         <location filename="../main.qml" line="584"/>
@@ -2025,7 +2025,7 @@ Ringsize: </source>
     <message>
         <location filename="../main.qml" line="768"/>
         <source>Payment proof</source>
-        <translation>Pavedimo patvirtinimas</translation>
+        <translation>Pervedimo patvirtinimas</translation>
     </message>
     <message>
         <location filename="../main.qml" line="771"/>
@@ -2036,7 +2036,7 @@ Ringsize: </source>
     <message>
         <location filename="../main.qml" line="797"/>
         <source>Payment proof check</source>
-        <translation>Pavedimo tikrinimas</translation>
+        <translation>Pervedimo tikrinimas</translation>
     </message>
     <message>
         <location filename="../main.qml" line="800"/>
@@ -2114,7 +2114,7 @@ Ringsize: </source>
         <source>
 Number of transactions: </source>
         <translation>
-Pavedimų skaičius: </translation>
+Pervedimų skaičius: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="588"/>
@@ -2148,12 +2148,12 @@ Aprašymas: </translation>
     <message>
         <location filename="../main.qml" line="742"/>
         <source>Money sent successfully: %1 transaction(s) </source>
-        <translation>Pinigai išsiųsti sėkmingai: %1 pavedimas(ai) </translation>
+        <translation>Pinigai išsiųsti sėkmingai: %1 pervedimas(ai) </translation>
     </message>
     <message>
         <location filename="../main.qml" line="742"/>
         <source>Transaction saved to file: %1</source>
-        <translation>Pavedimas išsaugotas į failą: %1</translation>
+        <translation>Pervedimas išsaugotas į failą: %1</translation>
     </message>
     <message>
         <location filename="../main.qml" line="805"/>
@@ -2203,7 +2203,7 @@ Aprašymas: </translation>
     <message>
         <location filename="../main.qml" line="572"/>
         <source>Creating transaction</source>
-        <translation>Sukuriamas pavedimas</translation>
+        <translation>Sukuriamas pervedimas</translation>
     </message>
 </context>
 </TS>
